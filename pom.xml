@@ -77,7 +77,6 @@
 		    <groupId>io.jsonwebtoken</groupId>
 		    <artifactId>jjwt-impl</artifactId>
 		    <version>0.12.5</version>
-		    <scope>runtime</scope>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson -->
@@ -85,16 +84,17 @@
 		    <groupId>io.jsonwebtoken</groupId>
 		    <artifactId>jjwt-jackson</artifactId>
 		    <version>0.12.5</version>
-		    <scope>runtime</scope>
 		</dependency>
-
+		
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
 		<dependency>
-			<groupId>es.dsw</groupId>
-			<artifactId>KUiKQR_PRW</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt</artifactId>
+		    <version>0.12.5</version>
 		</dependency>
+		
 	</dependencies>
-
+	
 	<build>
 		<plugins>
 			<plugin>
