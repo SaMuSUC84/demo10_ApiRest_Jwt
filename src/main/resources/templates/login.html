@@ -1,7 +1,36 @@
-<form>
-	<label>Usuario:</label>
-	<input type="text">
-	<label>Password:</label>
-	<input type="password">
-	<button type=submit>Iniciar sesion</button>
-</form>
+<!DOCTYPE html>
+<html
+    lang="es"
+    xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+		http-equiv="X-UA-Compatible"
+		content="IE=edge">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >    
+    <title>Acceso</title>    
+</head>
+
+<body>
+	<form method="POST"
+	      th:action="@{/user/authenticate}">
+		<label for="username">Usuario:</label>
+		<input 
+			type="text"
+			name="username"
+		>
+		<label for="password">Contraseña:</label>
+		<input 
+			type="password"
+			name="password"
+		>
+		<button type=submit>Iniciar sesion</button>
+	</form>
+</body>
+
+</html>
