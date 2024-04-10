@@ -1,7 +1,6 @@
 package es.dsw.controller.apis;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,11 +20,10 @@ import es.dsw.service.auth.AuthenticationService;
 @RequestMapping("/user")
 public class UsuarioController 
 {
-
 	@Autowired
 	private AuthenticationService authenticationService;
 	
-	
+	// Endpoint de utileria para comprobar si el token es válido.
 	@GetMapping(value= {"/validate"})
 	public ResponseEntity<Boolean> validar(
 			@RequestParam String jwt)
@@ -34,7 +32,7 @@ public class UsuarioController
 		return ResponseEntity.ok(isTokenValid);
 	} 
 	
-	
+	// Endpoint de autenticación.
 	@PostMapping(value = {"/authenticate"}, produces = "application/json")
 	public ResponseEntity<AuthenticationResponse> autenticar(
 			@RequestBody AuthenticationRequest authRequest)

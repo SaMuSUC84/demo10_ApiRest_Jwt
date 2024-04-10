@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Java-SpringBoot-Thymeleaf-DEMO10-APIREST-JWT</name>
-	<description>ApiRest pura con Spring Security y JWT con método Auth</description>
+	<description>Demo 10 ApiRest pura con Spring Security y JWT con método Auth</description>
 	<properties>
 		<java.version>17</java.version>
 		<jjwt.version>0.12.5</jjwt.version>
@@ -92,13 +92,8 @@
 		    <groupId>io.jsonwebtoken</groupId>
 		    <artifactId>jjwt</artifactId>
 		    <version>${jjwt.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>es.dws</groupId>
-			<artifactId>BackOfficeCinema</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency>	
+				
 	</dependencies>
 	
 	<build>
