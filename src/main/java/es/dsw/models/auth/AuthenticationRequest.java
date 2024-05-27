@@ -5,6 +5,10 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class AuthenticationRequest implements Serializable
 {
+	/*
+	 * Clase para manejar la request del usuario
+	 */
+	
 	private String username;
 	
 	private String password;

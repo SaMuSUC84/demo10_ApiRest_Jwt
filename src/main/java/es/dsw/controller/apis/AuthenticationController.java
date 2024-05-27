@@ -17,14 +17,16 @@ import es.dsw.service.auth.AuthenticationService;
 
 
 @RestController
-@RequestMapping("/user")
-public class UsuarioController 
+@RequestMapping("/auth")
+public class AuthenticationController 
 {
 	@Autowired
 	private AuthenticationService authenticationService;
 	
-	// Endpoint de utileria para comprobar si el token es válido.
-	@GetMapping(value= {"/validate"})
+	/*
+	 *  Endpoint de utileria para comprobar si el token es válido.
+	 */
+	@GetMapping(value= {"/validate-token"})
 	public ResponseEntity<Boolean> validar(
 			@RequestParam String jwt)
 	{
@@ -32,7 +34,9 @@ public class UsuarioController
 		return ResponseEntity.ok(isTokenValid);
 	} 
 	
-	// Endpoint de autenticación.
+	/*
+	 *  Endpoint de autenticación.
+	 */
 	@PostMapping(value = {"/authenticate"}, produces = "application/json")
 	public ResponseEntity<AuthenticationResponse> autenticar(
 			@RequestBody AuthenticationRequest authRequest)
